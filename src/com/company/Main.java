@@ -6,9 +6,9 @@ public class Main {
         System.out.println("whyyyyy?");
         System.out.println("distance (12,3)= "+ distance(12,3));
         System.out.println("product (12,3)= "+product(12, 3));
-        System.out.println("quotient (12,3= "+divider(12, 3));
+        System.out.println("quotient (12,3)= "+divider(12, 3));
         System.out.println("remainder (15, 2)= "+remainder(15, 2));
-        System.out.println("power (3, 4)= "+power(3, 4));
+        System.out.println("power (7, 4)= "+power(7, 4));
     }
     public static int distance(int x, int y) {
         int count =0;
@@ -42,7 +42,7 @@ public class Main {
         else if (x ==y )
             return 1;
         else {
-            int h=0;
+            int h=y;
             while (h<=x){
                 count +=1;
                 h += y;
@@ -68,14 +68,23 @@ public class Main {
         }
     }
     public static int power(int x, int y){
-        int result = x;
-        if (y == 0)
+        /*int result = x;
+        if (y == 0 || x== 0)
             return 1;
         if (x ==0 && y == 0 )
             return -1;
         for (int i =1; i <y ; i++){
             result *= x ;
         }
-        return result;
+        return result;*/
+         // int result = (int)Math.pow(x,y);
+        //return result;
+        if (y ==0 || x == 1)
+            return 1;
+        if (y ==1)
+            return x;
+        else
+            return (x * power(x , y-1));
+
     }
 }
