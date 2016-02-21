@@ -9,6 +9,8 @@ public class Main {
         System.out.println("quotient (12,3)= "+divider(12, 3));
         System.out.println("remainder (15, 2)= "+remainder(15, 2));
         System.out.println("power (7, 4)= "+power(7, 4));
+        System.out.println("sqrt (9)= "+sqrt(9));
+        System.out.println("sum of digits (123)= "+sumOfDigits(123));
     }
     public static int distance(int x, int y) {
         int count =0;
@@ -86,5 +88,20 @@ public class Main {
         else
             return (x * power(x , y-1));
 
+    }
+    public static int sqrt(int x){
+        int s =1 ;
+        while ((s*s) < x)
+           s++;
+        return s;
+    }
+    public static int sumOfDigits(int x){
+        int sum = 0;
+        while ((x % 10) > 1){
+            sum +=x % 10;
+            x = x/10;
+        }
+        sum +=x;
+        return sum;
     }
 }
