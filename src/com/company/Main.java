@@ -40,7 +40,7 @@ public class Main {
             return 1;
         else {
             int h=0;
-            while (h<x){
+            while (h<=x){
                 count +=1;
                 h += y;
             }
