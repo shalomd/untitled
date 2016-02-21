@@ -4,10 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("whyyyyy?");
-        System.out.println(distance(12,3));
-        System.out.println(product(12, 3));
-        System.out.println(divider(12, 3));
-        System.out.println(remeinder(15, 2));
+        System.out.println("distance (12,3)= "+ distance(12,3));
+        System.out.println("product (12,3)= "+product(12, 3));
+        System.out.println("quotient (12,3= "+divider(12, 3));
+        System.out.println("remainder (15, 2)= "+remainder(15, 2));
+        System.out.println("power (3, 4)= "+power(3, 4));
     }
     public static int distance(int x, int y) {
         int count =0;
@@ -50,7 +51,7 @@ public class Main {
         }
 
     }
-    public static int remeinder(int x, int y){
+    public static int remainder(int x, int y){
         if (y>x)
             return 0;
         else if (x == y )
@@ -63,7 +64,18 @@ public class Main {
             if (h==x)
                 return 0;
             else
-                return distance( x,h);
+                return distance(x, h);
         }
+    }
+    public static int power(int x, int y){
+        int result = x;
+        if (y == 0)
+            return 1;
+        if (x ==0 && y == 0 )
+            return -1;
+        for (int i =1; i <y ; i++){
+            result *= x ;
+        }
+        return result;
     }
 }
