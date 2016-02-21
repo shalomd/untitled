@@ -11,6 +11,11 @@ public class Main {
         System.out.println("power (7, 4)= "+power(7, 4));
         System.out.println("sqrt (9)= "+sqrt(9));
         System.out.println("sum of digits (123)= "+sumOfDigits(123));
+        System.out.println("largest of digits (16598)= "+largestDigit(16598));
+        System.out.println("reverse of digits (16598)= "+reverseDigits(1205));
+        drawRectangle(10, 10);
+        drawRectangleWithLoc(6, 6, 5, 5);
+        drawCircle(10);
     }
     public static int distance(int x, int y) {
         int count =0;
@@ -103,5 +108,80 @@ public class Main {
         }
         sum +=x;
         return sum;
+    }
+    public static int largestDigit(int x){
+        int big=0;
+        while ((x % 10) > 1 || x >= 1){
+            if ((x % 10) > big)
+                big = x%10;
+            x = x/10;
+        }
+        return big;
+    }
+    public static int reverseDigits(int x){
+        int rev=0;
+        while ((x % 10) > 1 || x >= 1){
+            rev = (rev *10) + (x % 10);
+            x = x/10;
+        }
+        return rev;
+    }
+    public static void drawRectangle(int w, int h){
+        for (int i=0;i<w;i++){
+            System.out.print("*");
+        }
+        for (int i =0; i< (h-2); i++){
+            System.out.println();
+            System.out.print("*");
+            for (int j=0;j<(w-2);j++){
+                System.out.print(" ");
+            }
+            System.out.print("*");
+        }
+        System.out.println();
+        for (int i=0;i<w;i++){
+            System.out.print("*");
+        }
+    }
+    public static void drawRectangleWithLoc(int w, int h ,int x, int y){
+        for (int i=0;i<y;i++){
+            System.out.println();
+        }
+        for (int i=0;i<x;i++){
+            System.out.print(" ");
+        }
+        for (int i=0;i<w;i++){
+            System.out.print("*");
+        }
+        for (int i =0; i< (h-2); i++){
+            System.out.println();
+            for (int k=0;k<x;k++){
+                System.out.print(" ");
+            }
+            System.out.print("*");
+            for (int j=0;j<(w-2);j++){
+                System.out.print(" ");
+            }
+            System.out.print("*");
+        }
+        System.out.println();
+        for (int i=0;i<x;i++){
+            System.out.print(" ");
+        }
+        for (int i=0;i<w;i++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+    public static void drawCircle(int r) {
+        for (int i = 0; i < (r * 2)-1; i++) {
+            for (int j = 0; j < (r * 2)-1; j++) {
+                if (i == r || j == r)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
     }
 }
