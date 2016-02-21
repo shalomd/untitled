@@ -34,6 +34,8 @@ public class Main {
     }
     public static int divider(int x, int y){
             int count=0;
+        if (y ==0)
+            return -1;
         if (y>x)
             return count;
         else if (x ==y )
@@ -49,11 +51,10 @@ public class Main {
 
     }
     public static int remeinder(int x, int y){
-        int count=0;
         if (y>x)
-            return count;
+            return 0;
         else if (x == y )
-            return count;
+            return 0;
         else {
             int h=0;
             while (h<x){
