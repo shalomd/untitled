@@ -16,7 +16,7 @@ public class Main {
         System.out.println("reverse of digits (16598)= "+reverseDigits(1205));
         drawRectangle(10, 10);
         drawRectangleWithLoc(6, 6, 5, 5);
-        drawCircle(30);
+        drawCircle(10);
     }
     public static int distance(int x, int y) {
         int count =0;
@@ -175,15 +175,16 @@ public class Main {
         System.out.println();
     }
     public static void drawCircle(int r) {
-        int h=r;
+        int h= r;
         int w=r;
         double z = r/10;
+
         for (int i = 0; i < h; i++) {
             for (int j = 0; j <= ((r * 2)+1); j++) {
                 if ((0 <= j && j < w*z )|| (((r * 2+1)-w*z) < j && j <= (r * 2+1)))
-                    System.out.print("*");
+                    System.out.print(" *");
                 else
-                    System.out.print(" ");
+                    System.out.print("  ");
             }
             System.out.println();
             z -=0.1;
@@ -192,9 +193,9 @@ public class Main {
         for (int i = 0; i <= h; i++) {
             for (int j = 0; j <= ((r * 2)+1); j++) {
                 if ((0 <= j && j < w*z )|| (((r * 2+1)-w*z) < j && j <= (r * 2+1)))
-                    System.out.print("*");
+                    System.out.print(" *");
                 else
-                    System.out.print(" ");
+                    System.out.print("  ");
             }
             System.out.println();
             z +=0.1;
